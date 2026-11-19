@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PancakePilot AI — Your Money. Your Moves. Your AI Copilot.</title>
+    <meta
+      name="description"
+      content="PancakePilot AI (PancakeMaker 2.0) helps you track personal and business expenses offline-first, scan receipts, predict cashflow, and make smarter financial decisions with Pip AI."
+    />
+    <meta property="og:title" content="PancakePilot AI — PancakeMaker 2.0" />
+    <meta
+      property="og:description"
+      content="Privacy-conscious, offline-first, AI-powered personal and business finance platform."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#080B16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('pancakepilot_theme');
+          if (saved === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-[#F6F8FC] text-[#0F172A] dark:bg-[#080B16] dark:text-[#F6F7FB] antialiased selection:bg-[#A46BFF]/30">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

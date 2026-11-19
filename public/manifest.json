@@ -1,0 +1,17 @@
+{
+  "name": "PancakePilot AI",
+  "short_name": "PancakePilot",
+  "description": "Offline-first AI personal and business finance copilot.",
+  "start_url": "/app",
+  "display": "standalone",
+  "background_color": "#080B16",
+  "theme_color": "#8156F8",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

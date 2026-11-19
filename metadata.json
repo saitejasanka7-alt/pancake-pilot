@@ -1,0 +1,6 @@
+{
+  "name": "PancakePilot AI",
+  "description": "PancakeMaker 2.0 — Privacy-conscious, offline-first, AI-powered personal and business finance platform with Pip AI copilot.",
+  "requestFramePermissions": ["microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

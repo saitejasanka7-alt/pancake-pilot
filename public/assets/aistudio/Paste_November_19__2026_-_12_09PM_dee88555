@@ -1,0 +1,1577 @@
+# MASTER PROMPT: PANCAKEPILOT AI
+## PancakeMaker 2.0 – AI-Powered Personal & Business Finance Platform
+
+### ROLE AND MISSION
+
+Act as a world-class full-stack software engineer, AI engineer, software architect, database engineer, product designer, UI/UX specialist and security engineer.
+
+Your mission is to transform the EXISTING PancakeMaker repository into a premium, fully functional, AI-powered finance management platform named:
+
+# PANCAKEPILOT AI
+### PancakeMaker 2.0
+**Tagline: Your Money. Your Moves. Your AI Copilot.**
+
+This is a competitive GDG Featurethon project. Build a product that demonstrates genuine technical innovation, practical usefulness, excellent design, and reliable end-to-end functionality.
+
+Do not merely create a static dashboard or frontend prototype. Build a complete working application with real database operations, backend integrations, authentication, AI functionality, analytics and working navigation.
+
+The final product should be impressive during a live hackathon demonstration and reliable enough to use beyond the event.
+
+---
+
+# PART 1 — EXISTING PROJECT AND REPOSITORY REQUIREMENTS
+
+## 1.1 Repository links
+
+Featurethon repository:
+
+https://github.com/AK555-DEL/GDG_FEATURETHON
+
+Existing project directory:
+
+GDG_FEATURETHON/pancakemaker/
+
+Original upstream repository:
+
+https://github.com/momentmaker/pancakemaker
+
+Work inside the existing pancakemaker directory.
+
+First inspect the entire existing codebase, including:
+
+- package.json files
+- package-lock.json
+- Existing React components
+- Application routes
+- Database implementation
+- Database migrations
+- Custom hooks
+- Shared TypeScript packages
+- API endpoints
+- Cloudflare Worker configuration
+- Authentication implementation
+- Synchronisation engine
+- Existing styles
+- Existing tests
+
+Do not start by generating a new application.
+
+Do not overwrite the existing implementation without understanding it.
+
+## 1.2 Existing functionality that must be preserved
+
+The existing PancakeMaker is an offline-first personal and business expense tracker.
+
+Preserve all existing features:
+
+1. Add, edit and delete expenses.
+2. Personal expense tracking.
+3. Business expense tracking.
+4. Transaction filtering.
+5. Quick expense entry.
+6. Category management.
+7. Panels for grouping transactions.
+8. Charts and spending summaries.
+9. Recurring monthly and yearly expenses.
+10. Inline editing.
+11. Multi-currency support.
+12. Local database persistence.
+13. Offline-first functionality.
+14. Installable PWA.
+15. Optional cloud synchronisation.
+16. Magic-link authentication.
+17. CSV and JSON export.
+18. Keyboard navigation and accessibility.
+
+Do not remove existing functionality to make room for new features.
+
+## 1.3 Existing technology stack
+
+Preserve and extend the existing architecture.
+
+- React 19
+- TypeScript
+- React Router v7
+- Tailwind CSS v4
+- Recharts
+- Vite
+- Turborepo
+- npm workspaces
+- wa-sqlite
+- IndexedDB
+- Cloudflare Workers
+- Hono.js
+- Cloudflare D1
+- Zod
+- Vitest
+- Resend magic-link authentication
+
+Use compatible dependencies only after checking the current project.
+
+Do not migrate to another frontend or backend framework unnecessarily.
+
+## 1.4 Existing source-code locations
+
+Use these documented locations as starting points. Verify their actual contents before editing.
+
+- apps/web/src/App.tsx – application routes and composition
+- apps/web/src/components/ – reusable components
+- apps/web/src/db/ – local database
+- apps/web/src/hooks/ – reusable hooks
+- apps/web/src/lib/ – utilities
+- apps/web/src/sync/ – cloud synchronisation
+- apps/web/src/views/ – existing pages
+- packages/shared/ – shared types and validation
+- workers/api/src/ – backend APIs
+- workers/api/migrations/ – database migrations
+
+## 1.5 Repository installation requirements
+
+The repository documentation specifies:
+
+- Node.js 20 or newer.
+- Node.js 24 LTS recommended.
+- npm 10.9.0.
+
+There is a documented root package version mismatch: package.json is 1.8.1 while the lockfile root is 1.8.0.
+
+Do not unnecessarily replace or regenerate the existing lockfile.
+
+Run installation, build and tests according to the actual repository scripts.
+
+---
+
+# PART 2 — BRANDING AND VISUAL EXPERIENCE
+
+## 2.1 Product identity
+
+Application name: PancakePilot AI
+
+Product edition: PancakeMaker 2.0
+
+AI assistant: Pip AI
+
+Tagline: Your Money. Your Moves. Your AI Copilot.
+
+Create a distinctive logo using a pancake stack with an AI sparkle, intelligent navigation symbol or compass motif.
+
+Create a visually cohesive brand identity.
+
+## 2.2 UI reference
+
+Use the attached AI Finance Assistant dashboard image as the primary inspiration.
+
+The design should feature:
+
+- Premium midnight-dark interface.
+- Deep navy backgrounds.
+- Purple and violet gradients.
+- Cyan and teal highlights.
+- Glowing AI assistant visual.
+- Beautiful analytical charts.
+- Rounded cards.
+- Subtle glass effects.
+- Smooth transitions.
+- Modern typography.
+- Professional spacing.
+- Minimal visual clutter.
+
+Suggested colours:
+
+- Background: #080B16
+- Sidebar: #101426
+- Cards: #151B30
+- Primary violet: #A46BFF
+- Accent purple: #8156F8
+- Cyan: #43D9E8
+- Success: #40D99A
+- Main text: #F6F7FB
+- Secondary text: #9BA6C0
+
+Use dark mode by default.
+
+Implement a fully working light/dark theme toggle.
+
+Ensure responsive design across desktops, tablets and mobile screens.
+
+Never sacrifice readability for visual effects.
+
+Use meaningful animations rather than excessive decorative movement.
+
+---
+
+# PART 3 — LANDING PAGE
+
+Create a premium SaaS-style landing page.
+
+Hero heading:
+
+"Take Control of Your Money. Let AI Guide Your Next Move."
+
+Description:
+
+"PancakePilot AI helps you track expenses, understand spending habits, predict financial trends and make smarter financial decisions with your personal AI finance copilot."
+
+Primary button: START YOUR FREE JOURNEY
+
+Secondary button: EXPLORE LIVE DEMO
+
+The landing page must include:
+
+1. Hero section.
+2. Animated financial dashboard preview.
+3. Meet Pip AI section.
+4. Intelligent budgeting section.
+5. Receipt scanning feature.
+6. Predictive analytics.
+7. Savings goals.
+8. Offline-first privacy.
+9. Product feature overview.
+10. How the platform works.
+11. Frequently asked questions.
+12. Footer with navigation.
+
+Use attractive illustrations or CSS/SVG-generated graphics.
+
+All CTA buttons must navigate correctly.
+
+The live demo button must launch a usable demonstration with seeded sample data.
+
+Do not use fake navigation links.
+
+---
+
+# PART 4 — COMPLETE AUTHENTICATION SYSTEM
+
+Authentication is a critical requirement.
+
+Implement fully functional:
+
+- Sign Up
+- Login
+- Email verification
+- Magic-link callback
+- Session management
+- Logout
+- User profile
+- Account management
+
+Important product principle:
+
+Users must still be able to use offline expense tracking without creating an account.
+
+Authentication is required for account-based cloud synchronisation and cross-device access.
+
+## 4.1 Sign-up page
+
+Build an attractive signup page.
+
+Fields:
+
+- Full name.
+- Email address.
+- Terms and privacy consent.
+
+Button: CREATE MY ACCOUNT
+
+Display validation messages for:
+
+- Empty fields.
+- Invalid email addresses.
+- Duplicate accounts.
+- API failures.
+- Network errors.
+
+## 4.2 Login page
+
+Fields:
+
+- Registered email address.
+
+Button: SEND SECURE LOGIN LINK
+
+Also provide:
+
+- Continue as Guest.
+- Explore Demo.
+- Create an Account.
+
+Use a clean, minimal, professional layout.
+
+## 4.3 Authentication backend
+
+Reuse and extend the existing magic-link authentication architecture.
+
+Implement this complete process:
+
+1. User enters email.
+2. Frontend validates the request.
+3. Backend receives the authentication request.
+4. Backend securely creates a time-limited, single-use token.
+5. Resend sends the authentication email.
+6. User opens the magic link.
+7. Backend verifies the token.
+8. Token is invalidated after successful use.
+9. User session is securely established.
+10. User reaches the dashboard.
+11. Cloud synchronisation becomes available.
+
+Implement:
+
+- Token expiration.
+- Single-use tokens.
+- Rate limiting.
+- Secure cookies or an appropriately designed session mechanism.
+- Server-side authorization.
+- Session expiration.
+- Logout and session revocation.
+
+Never expose API keys, authentication secrets or Resend credentials in frontend code.
+
+Do not fake login success.
+
+Do not claim that an email has been sent unless the email service confirms the operation.
+
+When production credentials are missing, show a clear configuration message and preserve guest mode.
+
+Provide a development-only demo authentication mode, isolated from production authentication.
+
+## 4.4 Guest-to-account migration
+
+When a guest signs up:
+
+- Preserve their locally stored transactions.
+- Offer to associate or migrate local records into the account.
+- Detect duplicate records.
+- Prevent accidental overwriting.
+- Display migration progress.
+- Confirm completion.
+
+---
+
+# PART 5 — MAIN APPLICATION DASHBOARD
+
+After successful login or choosing guest/demo mode, open the main dashboard.
+
+## 5.1 Sidebar navigation
+
+Create a beautiful sidebar containing:
+
+1. Overview
+2. Transactions
+3. Pip AI Assistant
+4. Smart Budgets
+5. Analytics
+6. Receipt Scanner
+7. Savings Goals
+8. Subscriptions
+9. Accounts and Wallets
+10. Split Expenses
+11. Financial Challenges
+12. Reports
+13. Settings
+
+Every menu item must open its actual working page.
+
+Indicate the active navigation item.
+
+Implement a responsive mobile navigation drawer.
+
+## 5.2 Dashboard header
+
+Display:
+
+- Personalised greeting.
+- User profile.
+- Search.
+- Notifications.
+- Quick Add Expense.
+- Currency selection.
+- Theme control.
+
+## 5.3 Financial summary
+
+Display dynamically calculated:
+
+- Total balance.
+- Monthly income.
+- Monthly expenses.
+- Net savings.
+- Savings rate.
+- Remaining budget.
+
+All cards must derive their values from actual database records.
+
+Never hardcode financial statistics.
+
+## 5.4 Dashboard charts
+
+Use Recharts to create:
+
+- Income versus expenses.
+- Monthly spending trends.
+- Category-wise donut chart.
+- Budget usage chart.
+- Spending comparison.
+- Recent transactions.
+
+Add working date filters:
+
+- This week.
+- This month.
+- Last month.
+- Last three months.
+- This year.
+- Custom date range.
+
+Charts should update immediately when the period or currency changes.
+
+---
+
+# PART 6 — SIGNATURE AI FEATURE: PIP AI FINANCE ASSISTANT
+
+This is the primary differentiating feature of PancakePilot AI.
+
+Build a dedicated AI finance assistant, not an ordinary chatbot.
+
+## 6.1 Visual experience
+
+Create a premium conversational interface with:
+
+- Animated AI orb.
+- Pip AI avatar.
+- Conversation history.
+- Chat window.
+- Text input.
+- Send button.
+- Voice input.
+- Typing indicator.
+- Suggested prompts.
+- Response cards.
+- Clear chat.
+- Context-aware financial insights.
+
+Greeting:
+
+"Hey! I'm Pip, your personal finance copilot. Let's make your money work smarter. What would you like to know?"
+
+## 6.2 Example prompts
+
+Provide working clickable prompts:
+
+- How much did I spend on food this week?
+- Why did my expenses increase?
+- Which category consumes most of my money?
+- How much can I save next month?
+- Am I exceeding my budget?
+- Which subscriptions cost me the most?
+- Predict next month's expenses.
+- How can I reduce unnecessary spending?
+- Compare my business and personal expenses.
+- Show my largest transactions.
+
+When clicked, execute the relevant query automatically.
+
+## 6.3 AI functionality
+
+Pip must support:
+
+1. Natural-language financial questions.
+2. Transaction analysis.
+3. Category spending analysis.
+4. Weekly and monthly comparisons.
+5. Spending trend analysis.
+6. Unusual transaction detection.
+7. Budget explanations.
+8. Savings recommendations.
+9. Subscription analysis.
+10. Monthly financial summaries.
+11. Personal versus business analysis.
+12. Predictive expense insights.
+
+## 6.4 AI integration
+
+Use Google Gemini through a secure backend integration.
+
+Keep the provider and model configurable.
+
+Store API credentials in server-side environment variables.
+
+Never place the Gemini API key in React frontend code.
+
+Build an AI service abstraction so the provider can be changed later.
+
+Before sending financial information to an external AI service:
+
+- Explain data processing to the user.
+- Minimise the information sent.
+- Respect privacy settings.
+- Ensure data is isolated by user.
+- Never send unrelated users' information.
+
+Use deterministic database calculations for all financial totals and percentages.
+
+Use AI to interpret calculated results and communicate insights.
+
+Never let AI execute arbitrary SQL or access unrestricted database tables.
+
+## 6.5 Example AI conversation
+
+User:
+
+"Why did I spend more this month?"
+
+Pip:
+
+"Your spending increased compared with last month. Food and transport contributed most to this increase."
+
+Then show:
+
+- Actual month-on-month difference.
+- Spending breakdown.
+- Relevant transactions.
+- Recommended action.
+
+Button: VIEW RELATED TRANSACTIONS
+
+This must navigate to a filtered transactions page.
+
+All response figures must be calculated from actual records.
+
+## 6.6 Offline fallback
+
+Without internet or an AI API key:
+
+- Show that the AI service is unavailable.
+- Offer basic locally calculated financial insights.
+- Answer supported predefined financial questions locally.
+- Show cached information only with its correct date.
+- Never fabricate an AI response.
+
+---
+
+# PART 7 — SMART BUDGET MANAGEMENT
+
+Create a complete budgeting system.
+
+Users must be able to:
+
+- Create budgets.
+- Set overall monthly limits.
+- Set category-specific budgets.
+- Create weekly budgets.
+- Edit budgets.
+- Delete budgets.
+- View remaining amounts.
+- Monitor budget progress.
+
+Display:
+
+- Budget amount.
+- Spent amount.
+- Remaining amount.
+- Percentage used.
+
+Add configurable alerts at 50%, 75%, 90% and 100%.
+
+Example:
+
+"Warning! You have used 85% of your food budget."
+
+Add beautiful progress bars and visual indicators.
+
+Use actual expenses to calculate utilisation.
+
+Allow Pip to recommend budget adjustments based on historical records.
+
+Predict potential budget overruns using transparent statistical calculations.
+
+---
+
+# PART 8 — RECEIPT SCANNER WITH OCR
+
+Develop an end-to-end receipt scanning module.
+
+Allow:
+
+- Image upload.
+- Mobile camera capture.
+- Image preview.
+- Image rotation.
+- OCR extraction.
+- Editing extracted details.
+- Category suggestions.
+- Saving confirmed records.
+
+Extract:
+
+- Merchant.
+- Amount.
+- Date.
+- Currency.
+- Tax where identifiable.
+- Description.
+- Suggested category.
+
+Use Tesseract.js or another compatible OCR integration, preferably supporting local processing.
+
+Show extracted-field confidence where available.
+
+Do not save automatically.
+
+Always let the user review and confirm extracted details.
+
+Add manual entry when OCR fails.
+
+Detect likely duplicate receipts without preventing legitimate separate purchases.
+
+---
+
+# PART 9 — EXPENSE PREDICTION AND ANOMALY DETECTION
+
+Create a dedicated predictive analytics module.
+
+Implement:
+
+- Next-month expenditure estimates.
+- Category-level predictions.
+- Rising spending detection.
+- Unusual transaction detection.
+- Budget-overrun warnings.
+- Historical comparisons.
+- Actual versus predicted charts.
+
+Begin with explainable statistical methods such as moving averages and historical category trends.
+
+Display:
+
+- Predicted expenditure.
+- Historical average.
+- Category predictions.
+- Confidence or uncertainty range where meaningful.
+- Explanation of the calculation.
+
+Example:
+
+"Based on your recent spending pattern, your estimated next-month expenses are ₹18,500."
+
+Clearly identify estimates as predictions rather than guaranteed outcomes.
+
+Test the calculations against known sample datasets.
+
+---
+
+# PART 10 — SAVINGS GOALS
+
+Implement a savings goal management system.
+
+Example goals:
+
+- Emergency fund.
+- Education.
+- New laptop.
+- Vacation.
+- Vehicle.
+- Personal purchases.
+
+Allow users to:
+
+- Create goals.
+- Edit goals.
+- Delete goals.
+- Add contributions.
+- Track progress.
+- Set target dates.
+
+Each goal must have:
+
+- Goal name.
+- Target amount.
+- Amount saved.
+- Target date.
+- Monthly contribution.
+- Completion percentage.
+
+Calculate required monthly savings and estimated completion dates.
+
+Display attractive animated progress visuals.
+
+Allow users to ask Pip for ways to reach goals faster.
+
+Savings contributions must not be incorrectly classified as expenses.
+
+---
+
+# PART 11 — SUBSCRIPTION MANAGER
+
+Reuse the existing recurring expenses functionality.
+
+Create a dedicated subscription dashboard.
+
+Track:
+
+- Streaming services.
+- Software.
+- Memberships.
+- Internet.
+- Insurance.
+- Rent.
+- Other recurring payments.
+
+Display:
+
+- Subscription name.
+- Amount.
+- Billing cycle.
+- Next payment.
+- Monthly equivalent.
+- Annual expenditure.
+
+Allow users to:
+
+- Add subscriptions.
+- Edit subscriptions.
+- Pause tracking.
+- Mark subscriptions as cancelled.
+- View payment history.
+
+Create in-app upcoming payment reminders.
+
+Prevent duplicate generation of recurring expenses.
+
+Preserve historical records when a subscription is cancelled.
+
+---
+
+# PART 12 — MULTIPLE ACCOUNTS AND WALLETS
+
+Add accounts such as:
+
+- Cash.
+- Savings account.
+- Bank account.
+- UPI wallet.
+- Credit card.
+- Other wallets.
+
+Each account should contain:
+
+- Account name.
+- Account type.
+- Currency.
+- Opening balance.
+- Current balance.
+- Transaction history.
+
+Implement money transfer tracking between accounts.
+
+Transfers must not be counted as income or expenses.
+
+Use correct balance calculations.
+
+Never request bank passwords, PINs or OTPs.
+
+---
+
+# PART 13 — SPLIT EXPENSES AND SHARED WALLETS
+
+Create an optional group expense feature.
+
+Allow users to:
+
+- Create groups.
+- Add participants.
+- Record shared expenses.
+- Select the payer.
+- Split equally.
+- Split by custom amounts.
+- Track balances.
+- Record settlements.
+
+Use cases:
+
+- Friends.
+- Roommates.
+- Hostel expenses.
+- Travel groups.
+- Family expenses.
+
+Display an understandable settlement summary showing who owes whom.
+
+Initially record settlements; do not implement real money transfers.
+
+---
+
+# PART 14 — VOICE-BASED EXPENSE ENTRY
+
+Allow users to add expenses through voice.
+
+Example:
+
+"I spent 250 rupees on lunch today."
+
+Extract:
+
+- Amount: ₹250.
+- Category: Food.
+- Date: Today.
+- Description: Lunch.
+
+Use browser-supported speech recognition with appropriate fallback.
+
+Allow users to:
+
+- Review extracted values.
+- Edit values.
+- Confirm.
+- Cancel.
+
+Do not automatically save an uncertain interpretation.
+
+---
+
+# PART 15 — BANK AND UPI STATEMENT IMPORT
+
+Create an importer for supported bank and UPI transaction statement files.
+
+Support CSV initially.
+
+Implement:
+
+1. File upload.
+2. File validation.
+3. Column mapping.
+4. Date and amount parsing.
+5. Transaction preview.
+6. Duplicate detection.
+7. Category recommendations.
+8. Error reporting.
+9. User confirmation.
+10. Import summary.
+
+Create reusable mappings for common statement formats.
+
+Preserve existing transactions.
+
+Do not invent direct bank or UPI account access.
+
+Never ask for banking credentials, PINs or OTPs.
+
+---
+
+# PART 16 — FINANCIAL HEALTH SCORE
+
+Create an explainable financial wellness indicator.
+
+Calculate using transparent components such as:
+
+- Savings rate.
+- Budget adherence.
+- Spending consistency.
+- Recurring payment burden.
+- Emergency savings progress.
+
+Display:
+
+- Overall score.
+- Component scores.
+- Improvement areas.
+- Practical suggestions.
+
+Explain the scoring formula.
+
+Clearly state that it is an educational budgeting measure, not a credit score or regulated financial assessment.
+
+---
+
+# PART 17 — FINANCIAL CHALLENGES AND GAMIFICATION
+
+Create interactive financial challenges.
+
+Examples:
+
+- Seven-day no-spend challenge.
+- Save ₹500 this week.
+- Reduce food expenses by 10%.
+- Track every expense for 30 days.
+
+Display:
+
+- Challenge progress.
+- Completed days.
+- Achievement badges.
+- Weekly milestones.
+- Personal achievements.
+
+Keep gamification positive and non-pressuring.
+
+---
+
+# PART 18 — NOTIFICATION SYSTEM
+
+Create an in-app notifications centre.
+
+Support:
+
+- Budget warnings.
+- Upcoming subscriptions.
+- Unusual spending.
+- Savings milestones.
+- Weekly summaries.
+- Successful imports.
+- Cloud sync status.
+
+Allow users to:
+
+- Mark as read.
+- Clear notifications.
+- Configure notification preferences.
+
+Use browser notifications only after permission is granted.
+
+Do not display false alerts.
+
+---
+
+# PART 19 — ANALYTICS AND FINANCIAL REPORTING
+
+Provide advanced financial reports.
+
+Include:
+
+- Daily expenditure.
+- Weekly expenditure.
+- Monthly expenditure.
+- Annual expenditure.
+- Income versus expenses.
+- Category analysis.
+- Savings rate.
+- Personal versus business comparisons.
+- Account-wise summaries.
+- Budget performance.
+
+Provide filtering by date and currency.
+
+Retain existing CSV and JSON exports.
+
+Add PDF report generation.
+
+A PDF report should contain:
+
+- Financial overview.
+- Income and expenses.
+- Category chart.
+- Spending comparisons.
+- Budget performance.
+- Savings progress.
+- Optional AI-generated commentary.
+
+All reports must use actual records and the selected period.
+
+---
+
+# PART 20 — MULTI-CURRENCY SUPPORT
+
+Preserve the existing 33-currency support.
+
+Keep the existing currency architecture and Frankfurter exchange-rate integration unless the repository reveals a better existing implementation.
+
+Include:
+
+- Default currency.
+- Currency selection per transaction.
+- Reporting currency.
+- Historical transaction currency.
+- Exchange rate caching.
+- Offline fallback.
+- Currency conversion.
+
+Set INR (₹) as the initial default.
+
+Never silently change the original currency of an existing transaction.
+
+Use accurate decimal or minor-unit calculations to avoid floating-point financial errors.
+
+---
+
+# PART 21 — SETTINGS, PRIVACY AND BACKUP
+
+Create a complete settings system.
+
+Sections:
+
+1. Profile.
+2. Currency.
+3. Categories.
+4. Accounts.
+5. Appearance.
+6. Notifications.
+7. AI privacy.
+8. Cloud synchronisation.
+9. Security.
+10. Data export.
+11. Backup and restore.
+12. Account deletion.
+
+Implement backup and recovery.
+
+Ensure users can export and restore their financial records.
+
+Show cloud synchronisation status clearly:
+
+- Offline.
+- Syncing.
+- Synced.
+- Failed.
+- Authentication required.
+
+Preserve local data when cloud services are unavailable.
+
+Handle synchronisation conflicts safely.
+
+Do not silently overwrite newer financial information.
+
+---
+
+# PART 22 — DATABASE AND BACKEND IMPLEMENTATION
+
+Inspect the existing database before adding new schemas.
+
+Extend the current data architecture.
+
+Use appropriate relational tables and migrations for new modules.
+
+Possible additional entities include:
+
+- users
+- profiles
+- budgets
+- budget_categories
+- savings_goals
+- savings_contributions
+- subscriptions
+- accounts
+- transfers
+- receipts
+- imported_transactions
+- expense_groups
+- group_members
+- shared_expenses
+- settlements
+- ai_conversations
+- ai_messages
+- notifications
+- financial_challenges
+- challenge_progress
+- user_preferences
+
+These are logical entities, not an instruction to duplicate existing tables. Reuse the existing expense, category, panel and recurring-expense schemas.
+
+Implement:
+
+- Foreign keys.
+- Indexes.
+- Validation.
+- Referential integrity.
+- User-level data isolation.
+- Database migrations.
+- Proper error handling.
+- Transaction-safe operations.
+
+Synchronisation must support the additional data entities.
+
+Never allow one user to read another user's data.
+
+All backend operations must verify authorization.
+
+---
+
+# PART 23 — API DESIGN
+
+Extend the existing Hono API.
+
+Create logically organised routes for:
+
+- Authentication.
+- Profile.
+- Expenses.
+- Budgets.
+- AI assistant.
+- Receipt processing.
+- Analytics.
+- Savings goals.
+- Subscriptions.
+- Accounts.
+- Transfers.
+- Shared expenses.
+- Notifications.
+- Reports.
+- Imports.
+- Synchronisation.
+
+Reuse existing endpoints where appropriate.
+
+Validate inputs with shared Zod schemas.
+
+Use correct HTTP response codes.
+
+Implement authorization middleware.
+
+Never trust frontend validation alone.
+
+Do not expose secrets in client-side code.
+
+Provide meaningful API error responses.
+
+---
+
+# PART 24 — COMPLETE FUNCTIONALITY REQUIREMENTS
+
+This section is mandatory.
+
+Every visible interactive element must work.
+
+Test all:
+
+- Navigation links.
+- Sidebar items.
+- Login buttons.
+- Signup buttons.
+- Guest mode.
+- Demo mode.
+- Authentication callbacks.
+- Logout.
+- Add expense.
+- Edit expense.
+- Delete expense.
+- Search.
+- Filters.
+- Date selectors.
+- Category selectors.
+- Budget creation.
+- Budget editing.
+- Receipt uploads.
+- OCR confirmation.
+- AI prompts.
+- AI conversation.
+- Voice input.
+- Goal creation.
+- Savings contributions.
+- Subscription actions.
+- Account creation.
+- Account transfers.
+- Shared expense operations.
+- Challenge actions.
+- Notifications.
+- CSV import.
+- CSV export.
+- JSON export.
+- PDF generation.
+- Theme toggle.
+- Currency selection.
+- Settings.
+- Backup.
+- Restore.
+
+All actions must have appropriate:
+
+- Loading states.
+- Success messages.
+- Failure messages.
+- Input validation.
+- Confirmation dialogs.
+- Disabled states.
+- Empty states.
+
+All routes must work after a browser refresh.
+
+All modal close buttons must work.
+
+Forms must submit correctly.
+
+No dead buttons.
+
+No placeholder navigation.
+
+No fake API responses presented as real functionality.
+
+---
+
+# PART 25 — DEMO MODE FOR FEATURETHON
+
+This is especially important for the live project presentation.
+
+Create an impressive one-click demo mode.
+
+The evaluator must be able to explore the application without configuring an email or providing personal financial information.
+
+Include realistic demo data:
+
+- Personal transactions.
+- Business transactions.
+- Monthly incomes.
+- Expenses.
+- Budget limits.
+- Subscriptions.
+- Savings goals.
+- Historical spending.
+- Account balances.
+
+Use clearly labelled fictional demonstration records.
+
+Create a visible DEMO MODE indicator.
+
+Provide a reset demo-data option.
+
+Make the demo work without:
+
+- Gemini API configuration.
+- Resend API configuration.
+- Cloudflare deployment.
+- Real bank connections.
+
+Where external services are unavailable, use clearly labelled local demo logic.
+
+Do not pretend local demo AI responses are live Gemini responses.
+
+Make it possible to demonstrate the entire product flow in approximately five minutes.
+
+---
+
+# PART 26 — DESIGN QUALITY AND ACCESSIBILITY
+
+The finished application should resemble a polished commercial SaaS platform.
+
+Requirements:
+
+- Consistent spacing.
+- Reusable design components.
+- Responsive layouts.
+- Accessible colour contrast.
+- Clear typography.
+- Keyboard navigation.
+- Screen-reader-friendly labels.
+- Good mobile layouts.
+- Smooth navigation.
+- Professional chart design.
+- Friendly empty states.
+- Consistent dialogs.
+- Clear action buttons.
+
+Avoid:
+
+- Excessive gradients.
+- Overcrowded dashboards.
+- Unnecessary animations.
+- Tiny text.
+- Decorative nonfunctional controls.
+- Generic template styling.
+
+Use the PancakePilot brand consistently throughout the application.
+
+---
+
+# PART 27 — TESTING AND BUG FIXES
+
+Do not consider the project complete after writing components.
+
+Run actual tests.
+
+## Build verification
+
+Run the documented installation and build commands from the monorepo root.
+
+Verify:
+
+- Dependencies resolve.
+- Shared packages build.
+- TypeScript compiles.
+- Frontend builds.
+- Worker builds.
+- Database migrations run.
+- Development servers start.
+
+## Functional testing
+
+Test:
+
+1. Guest access.
+2. Signup.
+3. Login.
+4. Email verification.
+5. Logout.
+6. Expense creation.
+7. Expense editing.
+8. Expense deletion.
+9. Category filtering.
+10. Dashboard calculations.
+11. Budget calculations.
+12. OCR extraction.
+13. AI query execution.
+14. Savings contribution.
+15. Subscription calculations.
+16. Account transfers.
+17. Cloud sync.
+18. Offline operation.
+19. CSV import and export.
+20. PDF generation.
+21. Data backup and recovery.
+
+## Automated testing
+
+Use existing Vitest infrastructure.
+
+Write unit tests for:
+
+- Expense calculations.
+- Budget calculations.
+- Currency calculations.
+- Prediction calculations.
+- Duplicate detection.
+- Savings progress.
+- Subscription recurrence.
+- Account transfers.
+- Data validation.
+
+Write integration tests for important APIs.
+
+Use browser-based end-to-end tests if a suitable existing setup is available. Prefer Playwright if adding it is justified.
+
+Test desktop and mobile layouts.
+
+Fix all critical errors.
+
+Do not claim that a test passed unless you actually ran it.
+
+---
+
+# PART 28 — PERFORMANCE AND SECURITY
+
+Performance:
+
+- Avoid unnecessary React renders.
+- Paginate large transaction lists.
+- Optimise database queries.
+- Lazy-load appropriate modules.
+- Optimise chart calculations.
+- Avoid loading complete histories unnecessarily.
+- Preserve fast offline access.
+
+Security:
+
+- Secure authentication.
+- Server-side validation.
+- User-level authorisation.
+- Secure secret management.
+- Rate limiting.
+- Safe file upload restrictions.
+- XSS protection.
+- Secure session management.
+- Private financial records.
+- No API secrets in frontend code.
+- No bank credentials or OTP collection.
+
+Implement privacy-conscious AI processing.
+
+Make the limitations of third-party AI processing clear to users.
+
+---
+
+# PART 29 — DEPLOYMENT AND DOCUMENTATION
+
+Prepare the application for local development and production deployment.
+
+Use the existing Cloudflare Worker and D1 architecture where appropriate.
+
+Document:
+
+- Required environment variables.
+- Database setup.
+- Database migrations.
+- Resend setup.
+- Gemini API setup.
+- Local development commands.
+- Production build commands.
+- Cloudflare deployment.
+- Frontend hosting configuration.
+- Domain configuration.
+
+Do not commit any `.env` files or secrets.
+
+Generate an `.env.example` containing placeholders only.
+
+Update the project's README with:
+
+- Project overview.
+- Feature list.
+- Architecture.
+- Installation.
+- Local development.
+- Environment setup.
+- Testing.
+- Deployment.
+- Demo instructions.
+
+Keep the existing MIT licensing information intact.
+
+---
+
+# PART 30 — IMPLEMENTATION STRATEGY
+
+Work in the following sequence.
+
+## PHASE 1: EXISTING APPLICATION AUDIT
+
+Inspect the source code.
+
+Prepare a short report containing:
+
+- Existing features.
+- Missing features.
+- Existing defects.
+- Architecture.
+- Database structure.
+- Authentication status.
+- Build status.
+- Dependencies.
+
+Identify functionality that already exists to avoid duplicate development.
+
+## PHASE 2: STABILISATION
+
+Fix installation, build, TypeScript, database, UI and navigation problems.
+
+Make sure the original expense tracker works correctly.
+
+Do not proceed by hiding existing errors.
+
+## PHASE 3: BRANDING AND DESIGN
+
+Create PancakePilot branding.
+
+Implement the landing page.
+
+Build the new responsive dashboard.
+
+Create all main navigation routes.
+
+## PHASE 4: AUTHENTICATION
+
+Implement signup, login, magic links, session handling, guest mode and demo mode.
+
+Test the complete authentication journey.
+
+## PHASE 5: CORE INTELLIGENCE
+
+Build Pip AI, budgeting, analytics, expense predictions and anomaly detection.
+
+## PHASE 6: ADVANCED FEATURES
+
+Build receipt scanning, savings goals, subscriptions, accounts, split expenses, voice entry, statement imports and financial challenges.
+
+## PHASE 7: BACKEND AND DATABASE
+
+Implement new schemas, APIs, migrations, synchronisation and secure user-data isolation.
+
+## PHASE 8: TESTING
+
+Test every route, form, button, API and important database operation.
+
+Fix all critical and high-priority defects.
+
+## PHASE 9: FEATURETHON PRESENTATION
+
+Prepare the demo environment, realistic sample records, concise product documentation and a reliable live demonstration journey.
+
+---
+
+# PART 31 — FINAL ACCEPTANCE CRITERIA
+
+The application is complete only when:
+
+1. Existing PancakeMaker functionality is preserved.
+2. PancakePilot branding is implemented throughout.
+3. Landing page works.
+4. Signup works.
+5. Login works.
+6. Magic-link verification works when configured.
+7. Guest access works.
+8. Demo mode works without external credentials.
+9. Dashboard uses real database calculations.
+10. Expense CRUD works.
+11. Pip AI works when configured.
+12. Offline financial insights work.
+13. Budget management works.
+14. Receipt OCR works.
+15. Predictions calculate from transaction history.
+16. Savings goals work.
+17. Subscription management works.
+18. Accounts and transfers work.
+19. Split expenses work.
+20. Voice entry has a fallback.
+21. CSV statement import works.
+22. Financial reports work.
+23. Notifications work.
+24. Offline-first operation remains intact.
+25. Cloud synchronisation handles conflicts safely.
+26. Mobile and desktop designs work.
+27. All visible buttons and navigation controls perform their intended actions.
+28. Security and validation are implemented.
+29. Automated tests run successfully.
+30. A complete demo can be presented without external service credentials.
+
+If a third-party integration requires unavailable credentials, implement its integration properly, provide configuration instructions and a truthful development/demo fallback. Do not fake production success.
+
+---
+
+# PART 32 — FINAL INSTRUCTIONS TO THE CODING AGENT
+
+Think like a product team building a real commercial fintech-style application.
+
+Prioritise:
+
+1. Functionality over decorative appearance.
+2. Reliability over unnecessary complexity.
+3. Correct financial calculations over AI-generated guesses.
+4. Data security over convenience.
+5. Offline capability over mandatory cloud dependency.
+6. Real working authentication over simulated login.
+7. Complete user journeys over isolated components.
+8. A distinctive product experience over generic dashboard templates.
+
+Do not stop after creating the UI.
+
+Do not just give me code snippets or implementation suggestions.
+
+Actually inspect, modify and implement the existing project files.
+
+After each phase, run relevant checks and fix failures before proceeding.
+
+Use sound engineering judgment to simplify features that would otherwise compromise stability.
+
+If a feature cannot be fully completed because an external service or credential is missing, clearly identify the limitation and implement the best functional local alternative.
+
+At the end, provide:
+
+- Summary of completed features.
+- Files created and modified.
+- Database migrations.
+- APIs implemented.
+- Environment variables required.
+- Commands to run the project.
+- Test results.
+- Outstanding limitations.
+- Exact steps to deploy.
+- Five-minute Featurethon demo script.
+
+# FINAL PRODUCT VISION
+
+PANCAKEPILOT AI
+
+"Not just tracking your money. Understanding it."
+
+A privacy-conscious, offline-first, AI-powered personal and business finance platform that helps people understand where their money goes, predict what comes next and make smarter everyday financial decisions.
+
+Build this as a complete, polished, demonstrable product—not just a concept or visual prototype.
+
+The final result should be worthy of a professional technology showcase and a serious GDG Featurethon competition.
